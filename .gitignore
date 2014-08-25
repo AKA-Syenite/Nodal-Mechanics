@@ -1,0 +1,21 @@
+# Ignore Gradle cache files & directories
+bin/
+build/
+libs/
+eclipse/
+minecraft/
+.classpath
+.gradle/
+.project
+.settings/
+
+# Ignore OS cache files & directories
+*.DS_Store
+_MACOSX
+Thumbs.db
+
+# Ignore IntelliJ files
+out/
+*.ipr
+*.iml
+*.iws
