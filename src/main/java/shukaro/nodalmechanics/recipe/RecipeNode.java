@@ -51,6 +51,7 @@ public class RecipeNode extends InfusionRecipe
                     else
                         aspectMap.put(s, aspectMap.get(s) + 1);
                 }
+                this.aspects = new AspectList();
                 AspectList smallAspects = new AspectList();
                 for (String s : aspectMap.keySet())
                 {
