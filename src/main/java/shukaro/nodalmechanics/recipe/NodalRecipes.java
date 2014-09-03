@@ -2,23 +2,19 @@ package shukaro.nodalmechanics.recipe;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
-import shukaro.nodalmechanics.NodalMechanics;
 import shukaro.nodalmechanics.items.NodalItems;
 import thaumcraft.api.ItemApi;
 import thaumcraft.api.ThaumcraftApi;
-import thaumcraft.api.ThaumcraftApiHelper;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectList;
 import thaumcraft.api.crafting.InfusionRecipe;
 import thaumcraft.api.crafting.ShapedArcaneRecipe;
 
-import java.lang.reflect.Field;
-import java.util.ArrayList;
-
 public class NodalRecipes
 {
     public static ShapedArcaneRecipe matrixRecipe;
-    public static ShapedArcaneRecipe attuneRecipe;
+    public static ShapedArcaneRecipe variedAttuneRecipe;
+    public static ShapedArcaneRecipe sameAttuneRecipe;
     public static InfusionRecipe nodeRecipe;
 
     public NodalRecipes()
@@ -32,10 +28,10 @@ public class NodalRecipes
                 Character.valueOf('Z'), ItemApi.getBlock("blockJar", 0)
         });
 
-        NBTTagCompound attuneTag = new NBTTagCompound();
-        attuneTag.setString("aspects", "aer,terra,ignis,aqua,ordo,perditio");
-        ItemStack attuned = new ItemStack(NodalItems.itemMatrix);
-        attuned.setTagCompound(attuneTag);
+        NBTTagCompound variedAttuneTag = new NBTTagCompound();
+        variedAttuneTag.setString("aspects", "aer,terra,ignis,aqua,ordo,perditio");
+        ItemStack variedAttune = new ItemStack(NodalItems.itemMatrix);
+        variedAttune.setTagCompound(variedAttuneTag);
         ItemStack[] phials = new ItemStack[6];
         Aspect[] primals = new Aspect[] { Aspect.AIR, Aspect.EARTH, Aspect.FIRE, Aspect.WATER, Aspect.ORDER, Aspect.ENTROPY };
         for (int i=0; i<phials.length; i++)
@@ -46,7 +42,7 @@ public class NodalRecipes
             list.writeToNBT(tag);
             phials[i].setTagCompound(tag);
         }
-        attuneRecipe = new ShapedArcaneRecipe("NODECATALYZATION", attuned, new AspectList().add(Aspect.ORDER, 8), new Object[] {
+        variedAttuneRecipe = new ShapedArcaneRecipe("NODECATALYZATION", variedAttune, new AspectList().add(Aspect.ORDER, 8), new Object[] {
                 "ABC",
                 " X ",
                 "DEF",
@@ -59,13 +55,30 @@ public class NodalRecipes
                 Character.valueOf('X'), NodalItems.itemMatrix
         });
 
+        NBTTagCompound sameAttuneTag = new NBTTagCompound();
+        sameAttuneTag.setString("aspects", "ignis,ignis,ignis,ignis,ignis,ignis,ignis,ignis");
+        ItemStack sameAttune = new ItemStack(NodalItems.itemMatrix);
+        sameAttune.setTagCompound(sameAttuneTag);
+        ItemStack ignisPhial = ItemApi.getItem("itemEssence", 1);
+        NBTTagCompound ignisTag = new NBTTagCompound();
+        AspectList ignisList = new AspectList().add(Aspect.FIRE, 8);
+        ignisList.writeToNBT(ignisTag);
+        ignisPhial.setTagCompound(ignisTag);
+        sameAttuneRecipe = new ShapedArcaneRecipe("NODECATALYZATION", sameAttune, new AspectList().add(Aspect.ORDER, 8), new Object[] {
+                "AAA",
+                "ABA",
+                "AAA",
+                Character.valueOf('A'), ignisPhial.copy(),
+                Character.valueOf('B'), NodalItems.itemMatrix
+        });
+
         NBTTagCompound nodeTag = new NBTTagCompound();
         AspectList nodeAspects = new AspectList().add(Aspect.AIR, 15).add(Aspect.EARTH, 15).add(Aspect.FIRE, 15).add(Aspect.WATER, 15).add(Aspect.ORDER, 15).add(Aspect.ENTROPY, 15);
         nodeAspects.writeToNBT(nodeTag);
         nodeTag.setInteger("nodetype", 0);
         ItemStack node = ItemApi.getItem("itemJarNode", 0);
         node.setTagCompound(nodeTag);
-        nodeRecipe = new InfusionRecipe("NODECATALYZATION", node, 6 * 3, new AspectList().add(Aspect.AIR, 150).add(Aspect.EARTH, 150).add(Aspect.FIRE, 150).add(Aspect.WATER, 150).add(Aspect.ORDER, 150).add(Aspect.ENTROPY, 150), attuned, new ItemStack[] { ItemApi.getItem("itemResource", 14), ItemApi.getItem("itemResource", 14)});
+        nodeRecipe = new InfusionRecipe("NODECATALYZATION", node, 6 * 3, new AspectList().add(Aspect.AIR, 150).add(Aspect.EARTH, 150).add(Aspect.FIRE, 150).add(Aspect.WATER, 150).add(Aspect.ORDER, 150).add(Aspect.ENTROPY, 150), variedAttune, new ItemStack[] { ItemApi.getItem("itemResource", 14), ItemApi.getItem("itemResource", 14)});
     }
 
     public void initRecipes()

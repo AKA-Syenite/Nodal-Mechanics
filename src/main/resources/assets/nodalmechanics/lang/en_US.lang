@@ -8,4 +8,4 @@ tooltip.nodalmechanics.matrix.unattuned=Empty
 tc.research_name.NODECATALYZATION=Node Catalyzation
 tc.research_text.NODECATALYZATION=From nothing... Something
 
-nodalmechanics.nodecatalyzation.research=By applying your knowledge of nodes and warded jars, you have successfully devised a method of catalyzing the formation of new nodes.<BR>By attuning a nodal matrix towards a combination of essentia to provide the "seed" for a node, you can then infuse it with a large amount of vis to spark the node's growth.
+nodalmechanics.nodecatalyzation.research=By applying your knowledge of nodes and warded jars, you have successfully devised a method of catalyzing the formation of new nodes.<BR>By attuning a freshly-crafted blank node matrix towards any combination of essentia to provide the seed for a node's growth, you can then infuse it with a large amount of compatible vis to spark the node's growth.

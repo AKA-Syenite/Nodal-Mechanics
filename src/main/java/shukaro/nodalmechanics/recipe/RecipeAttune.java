@@ -83,7 +83,10 @@ public class RecipeAttune implements IArcaneRecipe
             String aspects = "";
             for (String aspect : aspectMap.keySet())
             {
-                aspects = aspects + aspect + ",";
+                for (int i=0; i<aspectMap.get(aspect); i++)
+                {
+                    aspects = aspects + aspect + ",";
+                }
             }
             aspects = aspects.substring(0, aspects.length() - 1);
             output = new ItemStack(NodalItems.itemMatrix);

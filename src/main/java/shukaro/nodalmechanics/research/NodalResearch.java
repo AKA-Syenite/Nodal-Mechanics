@@ -20,7 +20,8 @@ public class NodalResearch
                                                     .setPages(new ResearchPage[]{
                                                     new ResearchPage(StatCollector.translateToLocal("nodalmechanics.nodecatalyzation.research")),
                                                     new ResearchPage(NodalRecipes.matrixRecipe),
-                                                    new ResearchPage(NodalRecipes.attuneRecipe),
+                                                    new ResearchPage(NodalRecipes.variedAttuneRecipe),
+                                                    new ResearchPage(NodalRecipes.sameAttuneRecipe),
                                                     new ResearchPage(NodalRecipes.nodeRecipe)})
                                                     .setParents("NODEJAR", "NODETAPPER2").setParentsHidden("JARLABEL").setSpecial();
         researchNodeCatalyzation.registerResearchItem();
