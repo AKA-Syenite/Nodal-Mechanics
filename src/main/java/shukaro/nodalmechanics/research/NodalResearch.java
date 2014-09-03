@@ -22,7 +22,8 @@ public class NodalResearch
                                                     new ResearchPage(NodalRecipes.matrixRecipe),
                                                     new ResearchPage(NodalRecipes.variedAttuneRecipe),
                                                     new ResearchPage(NodalRecipes.sameAttuneRecipe),
-                                                    new ResearchPage(NodalRecipes.nodeRecipe)})
+                                                    new ResearchPage(NodalRecipes.variedNodeRecipe),
+                                                    new ResearchPage(NodalRecipes.sameNodeRecipe)})
                                                     .setParents("NODEJAR", "NODETAPPER2").setParentsHidden("JARLABEL").setSpecial();
         researchNodeCatalyzation.registerResearchItem();
 

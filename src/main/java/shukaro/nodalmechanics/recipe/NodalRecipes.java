@@ -15,7 +15,8 @@ public class NodalRecipes
     public static ShapedArcaneRecipe matrixRecipe;
     public static ShapedArcaneRecipe variedAttuneRecipe;
     public static ShapedArcaneRecipe sameAttuneRecipe;
-    public static InfusionRecipe nodeRecipe;
+    public static InfusionRecipe variedNodeRecipe;
+    public static InfusionRecipe sameNodeRecipe;
 
     public NodalRecipes()
     {
@@ -78,7 +79,15 @@ public class NodalRecipes
         nodeTag.setInteger("nodetype", 0);
         ItemStack node = ItemApi.getItem("itemJarNode", 0);
         node.setTagCompound(nodeTag);
-        nodeRecipe = new InfusionRecipe("NODECATALYZATION", node, 6 * 3, new AspectList().add(Aspect.AIR, 150).add(Aspect.EARTH, 150).add(Aspect.FIRE, 150).add(Aspect.WATER, 150).add(Aspect.ORDER, 150).add(Aspect.ENTROPY, 150), variedAttune, new ItemStack[] { ItemApi.getItem("itemResource", 14), ItemApi.getItem("itemResource", 14)});
+        variedNodeRecipe = new InfusionRecipe("NODECATALYZATION", node, 10, new AspectList().add(Aspect.AIR, 150).add(Aspect.EARTH, 150).add(Aspect.FIRE, 150).add(Aspect.WATER, 150).add(Aspect.ORDER, 150).add(Aspect.ENTROPY, 150), variedAttune, new ItemStack[] { ItemApi.getItem("itemResource", 14), ItemApi.getItem("itemResource", 14)});
+
+        NBTTagCompound sameNodeTag = new NBTTagCompound();
+        AspectList sameNodeAspects = new AspectList().add(Aspect.AIR, 15 * 8);
+        sameNodeAspects.writeToNBT(sameNodeTag);
+        sameNodeTag.setInteger("nodetype", 0);
+        ItemStack sameNode = ItemApi.getItem("itemJarNode", 0);
+        sameNode.setTagCompound(sameNodeTag);
+        sameNodeRecipe = new InfusionRecipe("NODECATALYZATION", sameNode, 10, new AspectList().add(Aspect.FIRE, 150 * 8), sameAttune, new ItemStack[] { ItemApi.getItem("itemResource", 14), ItemApi.getItem("itemResource", 14)});
     }
 
     public void initRecipes()
