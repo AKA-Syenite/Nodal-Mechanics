@@ -82,7 +82,7 @@ public class NodalRecipes
         variedNodeRecipe = new InfusionRecipe("NODECATALYZATION", node, 10, new AspectList().add(Aspect.AIR, 150).add(Aspect.EARTH, 150).add(Aspect.FIRE, 150).add(Aspect.WATER, 150).add(Aspect.ORDER, 150).add(Aspect.ENTROPY, 150), variedAttune, new ItemStack[] { ItemApi.getItem("itemResource", 14), ItemApi.getItem("itemResource", 14)});
 
         NBTTagCompound sameNodeTag = new NBTTagCompound();
-        AspectList sameNodeAspects = new AspectList().add(Aspect.AIR, 15 * 8);
+        AspectList sameNodeAspects = new AspectList().add(Aspect.FIRE, 15 * 8);
         sameNodeAspects.writeToNBT(sameNodeTag);
         sameNodeTag.setInteger("nodetype", 0);
         ItemStack sameNode = ItemApi.getItem("itemJarNode", 0);
