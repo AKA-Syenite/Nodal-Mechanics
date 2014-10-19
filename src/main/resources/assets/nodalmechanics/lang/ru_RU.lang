@@ -1,11 +1,11 @@
 itemGroup.nodalmechanics.tab=Nodal Mechanics
 
-item.nodalmechanics.matrix.attuned.name=Настроенная матрица узла ауры
-item.nodalmechanics.matrix.unattuned.name=Ненастроенная матрица узла ауры
+item.nodalmechanics.matrix.attuned.name=Настроенная матрица узла
+item.nodalmechanics.matrix.unattuned.name=Ненастроенная матрица узла
 tooltip.nodalmechanics.matrix.attuned=Слабое гудение...
 tooltip.nodalmechanics.matrix.unattuned=Пусто
 
 tc.research_name.NODECATALYZATION=Катализация узла ауры
 tc.research_text.NODECATALYZATION=Что-то из ничего
 
-nodalmechanics.nodecatalyzation.research=Соединив ваши знания об узлах ауры и заключении их в банки, вы успешно открыли способ создания новых узлов ауры.<BR>Настраивая свежесозданную пустую матрицу узла ауры с помощью любых комбинаций эссенции, вы создаёте источник узла ауры, а затем, применив большой объём подходящей энергии вис, вселяете в источник искру жизни для роста.
+nodalmechanics.nodecatalyzation.research=Соединив Ваши знания об узлах ауры и заключении их в банки, Вы успешно открыли способ создания новых узлов ауры.<BR>Настраивая свежесозданную пустую матрицу узла ауры с помощью любых комбинаций эссенций, Вы создаёте источник узла ауры, а затем, применив большой объём подходящей энергии Вис, наполняете источник искрой жизни для роста.
