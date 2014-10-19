@@ -3,7 +3,7 @@
 Nodal Mechanics is an addon for [Thaumcraft 4](http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/1292130-thaumcraft-) by Azanor which adds the ability to craft aura nodes via infusion.
 
 ### Contributing
-Feel free to submit pull requests or issues to the tracker. To set up your environment, run `git clone https://github.com/Shukaro/WarpTheory.git`, then `gradlew setupDecompWorkspace`, and then either `gradlew eclipse` or `gradlew idea`. After that you can produce builds by running `gradlew build`. Ensure that `src/api` is available as a sources folder.
+Feel free to submit pull requests or issues to the tracker. To set up your environment, run `git clone https://github.com/Shukaro/Nodal-Mechanics.git`, then `gradlew setupDecompWorkspace`, and then either `gradlew eclipse` or `gradlew idea`. After that you can produce builds by running `gradlew build`. Ensure that `src/api` is available as a sources folder.
 
 ### Builds
 Builds are available via [Jenkins](http://76.72.175.100:8080/job/Nodal%20Mechanics/), stable builds are marked with a star.
