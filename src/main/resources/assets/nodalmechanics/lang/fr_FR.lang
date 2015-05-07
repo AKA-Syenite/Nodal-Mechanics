@@ -1,0 +1,11 @@
+itemGroup.nodalmechanics.tab=Mécaniques des Noeuds
+
+item.nodalmechanics.matrix.attuned.name=Matrice de Noeud Lié
+item.nodalmechanics.matrix.unattuned.name=Matrice de Noeud Non Lié
+tooltip.nodalmechanics.matrix.attuned=Bourdonnement légèrement...
+tooltip.nodalmechanics.matrix.unattuned=Vide
+
+tc.research_name.NODECATALYZATION=Catalyse des Noeuds
+tc.research_text.NODECATALYZATION=De rien.... Quelque chose
+
+nodalmechanics.nodecatalyzation.research=Par application de votre connaissance des noeuds et jarres, vous avez trouvé une façon incroyable a former les nouvelles noeuds.<BR>Par lier une nouvelle matrice de noeud au n'importe quel combination d'essentia pour créer une graine pour la croissance d'une noeud. Là , vous pouvez infuser la graine avec beaucoup de vis pour créer une nouvelle noeud.
